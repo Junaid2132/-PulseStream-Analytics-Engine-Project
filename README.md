@@ -56,14 +56,27 @@ Includes clean isolated directory roots ready to provision scalable cloud wareho
 
 ## 🛠️ 3. Tech Stack and Tools
 
-CategoryTechnologyPurpose / Role in PipelineContainerizationDocker & Docker ComposeMulti-container environment isolationStream IngestionApache Kafka & ZookeeperDistributed decoupled message brokeringStream ProcessingApache Spark (PySpark)Structured Streaming micro-batch processing engineCore LanguagePython 3.10+Synthetic data generation and streaming scriptsTransformationdbt CorePrepared operational database modeling structureInfrastructure as CodeTerraformHashiCorp infrastructure provisioning layout
+| Category | Technology | Purpose / Role in Pipeline |
+| :--- | :--- | :--- |
+| **Containerization** | Docker & Docker Compose | Multi-container environment isolation |
+| **Stream Ingestion** | Apache Kafka & Zookeeper | Distributed decoupled message brokering |
+| **Stream Processing** | Apache Spark (PySpark) | Structured Streaming micro-batch processing engine |
+| **Core Language** | Python 3.10+ | Synthetic data generation and streaming scripts |
+| **Transformation** | dbt Core | Prepared operational database modeling structure |
+| **Infrastructure as Code** | Terraform | HashiCorp infrastructure provisioning layout |
 
 <br><br>
 
 ## 📋 4. Stream Data Contract and Schema Enforcement
 
-To guarantee downstream data integrity and stop malformed payloads from breaking the compute cluster, raw binary messages are cast into validated formats using strict Spark SQL types:
-Field NameData TypeDescriptiontimestampStringTypeISO-8601 formatted event execution runtime loguser_idStringTypeUnique alphanumeric token tracking the user sessionactionStringTypeEvent activity type (click, view, add_to_cart, purchase)product_idStringTypeStandard stock keeping unit (SKU) identifying itemsamountDoubleTypeFinancial transaction transaction cost parametercountryStringTypeAlpha-2 geographical identification code
+| Field Name | Data Type | Description |
+| :--- | :--- | :--- |
+| `timestamp` | `StringType` | ISO-8601 formatted event execution runtime log |
+| `user_id` | `StringType` | Unique alphanumeric token tracking the user session |
+| `action` | `StringType` | Event activity type (`click`, `view`, `add_to_cart`, `purchase`) |
+| `product_id` | `StringType` | Standard stock keeping unit (SKU) identifying items |
+| `amount` | `DoubleType` | Financial transaction transaction cost parameter |
+| `country` | `StringType` | Alpha-2 geographical identification code |
 
 <br><br>
 
