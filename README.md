@@ -99,12 +99,12 @@ Follow these automated steps sequentially within your terminal environment to in
 
 Step 1: Launch the Infrastructure Cluster
 
-PowerShell docker-compose up -d
+docker-compose up -d
 
 Step 2: Submit and Execute the Spark Streaming Engine
 
-PowerShell docker exec -it stream-spark-master /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 /tmp/spark_streaming.py
+docker exec -it stream-spark-master /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 /tmp/spark_streaming.py
 
 Step 3: Initialize the Synthetic Data Streaming Producer
 
-PowerShell docker start stream-kafka-producer
+docker start stream-kafka-producer
