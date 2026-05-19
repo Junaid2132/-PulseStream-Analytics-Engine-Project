@@ -2,6 +2,8 @@
 
 An enterprise-grade, end-to-end real-time data engineering pipeline designed to ingest, process, and analyze high-velocity transactional events and clickstream data from an e-commerce platform with sub-second latency.
 
+<br><br>
+
 ## 📌 Table of Contents
 * [1. Project Overview](#📖-1-project-overview)
 * [2. System Architecture and Data Flow](#🏗️-2-system-architecture-and-data-flow)
@@ -39,12 +41,15 @@ The entire data pipeline infrastructure is fully containerized, isolated, and or
 [ Live Interactive Console Output Dashboard ]
 
 Infrastructure Components BreakdownEvent Ingestion Engine (Kafka & Zookeeper):
+
 Serves as the distributed messaging backbone. Zookeeper handles health tracking and coordination, while the Kafka broker acts as the persistent storage log queue for the live ingestion stream.
 
 Stream Processing Engine (Apache Spark Master-Worker):
+
 A distributed standalone compute layer configured to continuously consume windowed event data micro-batches concurrently.
 
 Modern Data Stack Layout (dbt & Terraform): 
+
 Includes clean isolated directory roots ready to provision scalable cloud warehouses managed entirely by automation scripts.
 
 <br><br>
@@ -71,6 +76,7 @@ Rule Matrix:
 The compute engine checks every event. If the interaction type is marked as a purchase and the financial monetary amount exceeds a strict threshold of $5000.0, it is isolated as an alert signature.
 
 Flag Mapping:
+
 Records satisfying this risk condition are given an explicit analytical flag index value of 1, while standard standard safe interactions evaluate to a default state indicator of 0.
 
 <br><br>
@@ -79,10 +85,13 @@ Records satisfying this risk condition are given an explicit analytical flag ind
 Follow these automated steps sequentially within your terminal environment to initialize the cluster and review the live streaming analytics output:
 
 Step 1: Launch the Infrastructure Cluster
+
 PowerShell docker-compose up -d
 
 Step 2: Submit and Execute the Spark Streaming Engine
+
 PowerShell docker exec -it stream-spark-master /opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 /tmp/spark_streaming.py
 
 Step 3: Initialize the Synthetic Data Streaming Producer
+
 PowerShell docker start stream-kafka-producer
