@@ -23,6 +23,8 @@ PulseStream solves this challenge by implementing a decoupled, fault-tolerant in
 <br><br>
 
 ## 🏗️ 2. System Architecture and Data Flow
+<img width="1077" height="468" alt="diagram-export-19-05-2026-22_19_16" src="https://github.com/user-attachments/assets/a1884a89-8d69-43f8-88e4-25257471d945" />
+
 
 Infrastructure Components BreakdownEvent Ingestion Engine (Kafka & Zookeeper):
 
