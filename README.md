@@ -27,9 +27,11 @@ PulseStream solves this challenge by implementing a decoupled, fault-tolerant in
 
 <br><br>
 
-Infrastructure Components BreakdownEvent Ingestion Engine (Kafka & Zookeeper):
+Infrastructure Components 
 
 <br><br>
+
+BreakdownEvent Ingestion Engine (Kafka & Zookeeper):
 
 Serves as the distributed messaging backbone. Zookeeper handles health tracking and coordination, while the Kafka broker acts as the persistent storage log queue for the live ingestion stream.
 
