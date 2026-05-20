@@ -25,10 +25,12 @@ PulseStream solves this challenge by implementing a decoupled, fault-tolerant in
 ## 🏗️ 2. System Architecture and Data Flow
 <img width="1077" height="468" alt="diagram-export-19-05-2026-22_19_16" src="https://github.com/user-attachments/assets/a1884a89-8d69-43f8-88e4-25257471d945" />
 
-<br>
+<br><br>
 
 Infrastructure Components BreakdownEvent Ingestion Engine (Kafka & Zookeeper):
-<br>
+
+<br><br>
+
 Serves as the distributed messaging backbone. Zookeeper handles health tracking and coordination, while the Kafka broker acts as the persistent storage log queue for the live ingestion stream.
 
 Stream Processing Engine (Apache Spark Master-Worker):
