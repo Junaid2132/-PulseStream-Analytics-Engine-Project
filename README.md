@@ -31,7 +31,7 @@ Infrastructure Components
 
 <br><br>
 
-BreakdownEvent Ingestion Engine (Kafka & Zookeeper):
+Breakdown Event Ingestion Engine (Kafka & Zookeeper):
 
 Serves as the distributed messaging backbone. Zookeeper handles health tracking and coordination, while the Kafka broker acts as the persistent storage log queue for the live ingestion stream.
 
